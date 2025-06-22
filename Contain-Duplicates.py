@@ -4,13 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        num = list()
+        seen = set()
         for i in nums:
-            if i in num:
+            if i in seen:
                 return True
-                break
-            else:
-                num.append(i)
+            seen.add(i)
         return False
 solu = Solution()
-print(solu.containsDuplicate([1,2,1,3]))
+print(solu.containsDuplicate([1, 2, 1, 3]))
